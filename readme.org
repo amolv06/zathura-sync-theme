@@ -1,0 +1,14 @@
+* zathura-sync-theme
+
+This package allows you to synchronize Zathura's theme with Emacs for seamless PDF reading. It was heavily inspired by this [[https://blog.akaisuisei.org/communicating-with-zathura-via-dbus.html][blog post]] by mafty.
+
+** Preview
+
+The left two windows are pdf documents open in zathura.
+
+[[./preview.gif]]
+
+** Installation:
+
+Clone this repository and run ~package-install-file~ on ~zathura-sync-theme.el~. Ensure that recolor is set in Zathura.
+
