@@ -10,5 +10,5 @@ The left two windows are pdf documents open in zathura.
 
 ** Installation:
 
-Clone this repository and run ~package-install-file~ on ~zathura-sync-theme.el~. Ensure that recolor is set in Zathura. Enable ~zathura-sync-theme-mode~ and you're good to do.
+Clone this repository and run ~package-install-file~ on ~zathura-sync-theme.el~. Ensure that recolor is set in Zathura. Enable ~zathura-sync-theme-mode~ and you're good to go. I'm hoping to get this on Melpa soon.
 
