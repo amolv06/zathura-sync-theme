@@ -1,6 +1,6 @@
 * zathura-sync-theme
 
-This package allows you to synchronize Zathura's theme with Emacs for seamless PDF reading. It was heavily inspired by this [[https://blog.akaisuisei.org/communicating-with-zathura-via-dbus.html][blog post]] by mafty.
+This package allows you to synchronize Zathura's theme with Emacs for seamless PDF reading. Changing your emacs theme will automatically change your Zathura theme. It was heavily inspired by this [[https://blog.akaisuisei.org/communicating-with-zathura-via-dbus.html][blog post]] by mafty.
 
 ** Preview
 
