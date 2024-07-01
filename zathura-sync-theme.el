@@ -32,6 +32,16 @@
 					      "\""
 					      (face-attribute 'default :background)
 					      "\""))
+				,(cons 'default-fg
+				      (concat "set default-fg "
+					      "\""
+					      (face-attribute 'default :foreground)
+					      "\""))
+				,(cons 'default-bg
+				      (concat "set default-bg "
+					      "\""
+					      (face-attribute 'default :background)
+					      "\""))
 				,(cons 'mode-line-bg
 				      (concat "set statusbar-bg "
 					      "\""
@@ -41,7 +51,8 @@
 				      (concat "set statusbar-fg "
 					      "\""
 					      (face-attribute 'default :foreground nil 'default)
-					      "\"")))))
+					      "\""))
+				,(cons 'recolor (concat "set recolor true")))))
     (dolist (svc zathura-services)
       (dolist (msg zathura-message-alist)
 	(dbus-call-method :session
