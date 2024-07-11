@@ -32,14 +32,16 @@
 (defun zathura-sync-theme--write-config ()
   "Overwrites theme config."
   (with-temp-file zathura-sync-theme-config-file
-    (insert "# synced with emacs theme by zathura-sync-theme"
-            "\nset recolor-darkcolor \\" (face-attribute 'default :foreground)
-            "\nset recolor-lightcolor \\" (face-attribute 'default :background)
-            "\nset default-fg \\" (face-attribute 'default :foreground)
-            "\nset default-bg \\" (face-attribute 'default :background)
-            "\nset statusbar-bg \\" (face-attribute 'default :background nil 'default)
-            "\nset statusbar-fg \\" (face-attribute 'default :foreground nil 'default)
-            "\nset recolor true")))
+    (let ((fg (face-attribute 'default :foreground nil 'default))
+          (bg (face-attribute 'default :background nil 'default)))
+      (insert "# synced with emacs theme by zathura-sync-theme"
+              "\nset recolor-darkcolor \\" fg
+              "\nset recolor-lightcolor \\" bg
+              "\nset default-fg \\" fg
+              "\nset default-bg \\" bg
+              "\nset statusbar-bg \\" bg
+              "\nset statusbar-fg \\" fg
+              "\nset recolor true"))))
 
 (defun zathura-sync-theme--set (&rest _args)
   "Writes theme config and sends Zathura D-Bus command to refresh it."
