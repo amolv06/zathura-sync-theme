@@ -10,5 +10,4 @@ The left two windows are pdf documents open in zathura.
 
 ** Installation:
 
-Clone this repository and run ~package-install-file~ on ~zathura-sync-theme.el~. Ensure that recolor is set in Zathura. Enable ~zathura-sync-theme-mode~ and you're good to go. I'm hoping to get this on Melpa soon.
-
+Clone this repository and run ~package-install-file~ on ~zathura-sync-theme.el~. Enable ~zathura-sync-theme-mode~. It will write theme colors to =zathura-theme-config= (defaults to =~/.config/zathura/theme=). Make sure you include this file in =zathurarc=. When a new theme gets enabled, the =theme= file would be overwritten and =zathura= processes would be instructed to reload config over D-Bus. I'm hoping to get this on Melpa soon.
