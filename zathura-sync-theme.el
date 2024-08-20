@@ -19,6 +19,7 @@
 (require 'dbus)
 
 (defun zathura-set (&rest _args)
+  "Set colors in Zathura.  `_ARGS' is ignored."
   (let ((zathura-services (cl-remove-if-not (lambda (x) (cl-search "zathura" x))
 					    (dbus-list-names :session)))
 	(zathura-path "/org/pwmt/zathura")
@@ -68,7 +69,7 @@
 
 ;;;###autoload
 (define-minor-mode zathura-sync-theme-mode
-  "Synchronize the look and feel of Zathura with Emacs"
+  "Synchronize the look and feel of Zathura with Emacs."
   :global t
   :init-value nil
   :lighter "Zathura"
