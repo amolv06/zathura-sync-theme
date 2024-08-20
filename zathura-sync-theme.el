@@ -16,6 +16,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'dbus)
 
 (defun zathura-set (&rest _args)
   (let ((zathura-services (cl-remove-if-not (lambda (x) (cl-search "zathura" x))
