@@ -1,4 +1,4 @@
-;;; zathura-sync-theme.el --- Synchronize Zathura's look and feel with Emacs 
+;;; zathura-sync-theme.el --- Synchronize Zathura's look and feel with Emacs  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024 Amol Vaidya
 
