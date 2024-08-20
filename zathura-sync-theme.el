@@ -75,4 +75,5 @@
       (advice-add 'enable-theme :after #'zathura-set)
     (advice-remove 'enable-theme #'zathura-set)))
 
+(provide 'zathura-sync-theme)
 ;;; zathura-sync-theme.el ends here
