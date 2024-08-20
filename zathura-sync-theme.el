@@ -13,6 +13,8 @@
 ;; https://blog.akaisuisei.org/communicating-with-zathura-via-dbus.html
 ;; written by mafty.
 
+;;; Code:
+
 (require 'cl-lib)
 
 (defun zathura-set (&rest _args)
