@@ -18,6 +18,11 @@
 (require 'cl-lib)
 (require 'dbus)
 
+(defgroup zathura-sync-theme nil
+  "Synchronize Zathura's look and feel with Emacs."
+  :prefix "zathura-"
+  :group 'applications)
+
 (defun zathura-set (&rest _args)
   "Set colors in Zathura.  `_ARGS' is ignored."
   (let ((zathura-services (cl-remove-if-not (lambda (x) (cl-search "zathura" x))
