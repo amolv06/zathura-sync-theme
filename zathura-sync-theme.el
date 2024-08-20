@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2024 Amol Vaidya
 
-;; Author: Amol Vaidya  
+;; Author: Amol Vaidya
 ;; Version: 20240608.1444
 ;; Keywords: zathura, theming
 ;; URL: https://github.com/amolv06/zathura-sync-theme
