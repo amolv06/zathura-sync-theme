@@ -1,8 +1,8 @@
-;;; zathura-sync-theme.el --- Synchronize Zathura's look and feel with Emacs 
+;;; zathura-sync-theme.el --- Synchronize Zathura's look and feel with Emacs  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024 Amol Vaidya
 
-;; Author: Amol Vaidya  
+;; Author: Amol Vaidya
 ;; Version: 20240608.1444
 ;; Keywords: zathura, theming
 ;; URL: https://github.com/amolv06/zathura-sync-theme
@@ -13,9 +13,18 @@
 ;; https://blog.akaisuisei.org/communicating-with-zathura-via-dbus.html
 ;; written by mafty.
 
+;;; Code:
+
 (require 'cl-lib)
+(require 'dbus)
+
+(defgroup zathura-sync-theme nil
+  "Synchronize Zathura's look and feel with Emacs."
+  :prefix "zathura-"
+  :group 'applications)
 
 (defun zathura-set (&rest _args)
+  "Set colors in Zathura.  `_ARGS' is ignored."
   (let ((zathura-services (cl-remove-if-not (lambda (x) (cl-search "zathura" x))
 					    (dbus-list-names :session)))
 	(zathura-path "/org/pwmt/zathura")
@@ -65,7 +74,7 @@
 
 ;;;###autoload
 (define-minor-mode zathura-sync-theme-mode
-  "Synchronize the look and feel of Zathura with Emacs"
+  "Synchronize the look and feel of Zathura with Emacs."
   :global t
   :init-value nil
   :lighter "Zathura"
@@ -73,4 +82,5 @@
       (advice-add 'enable-theme :after #'zathura-set)
     (advice-remove 'enable-theme #'zathura-set)))
 
+(provide 'zathura-sync-theme)
 ;;; zathura-sync-theme.el ends here
