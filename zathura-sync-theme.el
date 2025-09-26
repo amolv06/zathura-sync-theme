@@ -1,4 +1,4 @@
-;;; zathura-sync-theme.el --- Synchronize Zathura's look and feel with Emacs  -*- lexical-binding: t; -*-
+;;; zathura-sync-theme.el --- Synchronize Zathura's look and feel with Emacs 
 
 ;; Copyright (C) 2024 Amol Vaidya
 
@@ -13,10 +13,7 @@
 ;; https://blog.akaisuisei.org/communicating-with-zathura-via-dbus.html
 ;; written by mafty.
 
-;;; Code:
-
 (require 'cl-lib)
-(require 'dbus)
 
 (defgroup zathura-sync-theme nil
   "Synchronize Zathura's look and feel with Emacs."
@@ -74,13 +71,15 @@
 
 ;;;###autoload
 (define-minor-mode zathura-sync-theme-mode
-  "Synchronize the look and feel of Zathura with Emacs."
+  "Synchronize the look and feel of Zathura with Emacs"
   :global t
   :init-value nil
   :lighter "Zathura"
   (if zathura-sync-theme-mode
-      (advice-add 'enable-theme :after #'zathura-set)
+      (progn (advice-add 'enable-theme :after #'zathura-set)
+	     (zathura-set))
     (advice-remove 'enable-theme #'zathura-set)))
 
 (provide 'zathura-sync-theme)
+
 ;;; zathura-sync-theme.el ends here
